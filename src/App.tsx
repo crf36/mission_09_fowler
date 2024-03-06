@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import teamsData from "./CollegeBasketballTeams.json";
 
+// Defining the structure of a basketball team
 interface BasketballTeam {
   tid: number;
   school: string;
@@ -10,8 +11,10 @@ interface BasketballTeam {
   state: string;
 }
 
+// Component for rendering individual basketball teams
 class Team extends React.Component<BasketballTeam> {
   render() {
+    // Set up props for easier access
     const { school, name, city, state } = this.props;
 
     return (
@@ -26,6 +29,7 @@ class Team extends React.Component<BasketballTeam> {
   }
 }
 
+// Function for rendering a list of basketball teams
 function ListTeams() {
   return (
     <div className="team-container">
