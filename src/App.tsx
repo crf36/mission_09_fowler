@@ -29,6 +29,18 @@ class Team extends React.Component<BasketballTeam> {
   }
 }
 
+function Header() {
+  return (
+    <div className="header">
+      <h1>March Madness Basketball Season 2024</h1>
+      <p>
+        On this website, you will find info about every college team that will
+        be competing in the NCAA this year!
+      </p>
+    </div>
+  );
+}
+
 // Function for rendering a list of basketball teams
 function ListTeams() {
   return (
@@ -44,11 +56,7 @@ function App() {
   return (
     <div>
       <div className="header">
-        <h1>March Madness Basketball Season 2024</h1>
-        <p>
-          On this website, you will find info about every college team that will
-          be competing in the NCAA this year!
-        </p>
+        <Header />
       </div>
       <div className="container">
         <ListTeams />
